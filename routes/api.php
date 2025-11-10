@@ -84,6 +84,7 @@ use Illuminate\Support\Facades\URL;
 
         // Upload & Parse PDF
         Route::post('papers/{paper}/upload', [AdminUploadController::class, 'upload']);
+        // Route::post('exams/{exam}/papers/upload', [AdminUploadController::class, 'upload']);
         Route::post('papers/{paper}/parse/{upload}', [AdminUploadController::class, 'parse']);
         Route::get('papers/{paper}/parse/{upload}', [AdminUploadController::class, 'getParsed']);
         Route::post('papers/{paper}/parse/{upload}/save', [AdminUploadController::class, 'saveParsed']);

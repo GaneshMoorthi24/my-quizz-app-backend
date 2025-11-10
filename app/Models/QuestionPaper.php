@@ -9,7 +9,7 @@ class QuestionPaper extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['exam_id', 'year', 'title'];
+    protected $fillable = ['exam_id', 'year', 'title', 'file_path'];
 
     public function exam()
     {
@@ -21,6 +21,9 @@ class QuestionPaper extends Model
         return $this->hasMany(Question::class);
     }
     
-
+    public function uploads()
+    {
+        return $this->hasMany(QuestionPaperUpload::class);
+    }
 
 }

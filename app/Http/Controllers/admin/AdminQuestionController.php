@@ -9,9 +9,14 @@ use Illuminate\Http\Request;
 
 class AdminQuestionController extends Controller
 {
-    public function index(QuestionPaper $paper)
+    public function index($paperId)
     {
-        return $paper->questions()->with('options')->get();
+        $paper = QuestionPaper::with('questions')->findOrFail($paperId);
+
+        return response()->json([
+            'paper' => $paper,
+            'questions' => $paper->questions,
+        ]);
     }
 
     public function store(Request $request, QuestionPaper $paper)
