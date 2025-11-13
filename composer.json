@@ -11,7 +11,11 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.3",
         "laravel/socialite": "^5.23",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "smalot/pdfparser": "^2.12",
+        "spatie/pdf-to-image": "^1.2",
+        "spatie/pdf-to-text": "^1.54",
+        "thiagoalessio/tesseract_ocr": "^2.13"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
